@@ -1,0 +1,20 @@
+body{
+margin:0;
+height:0;
+background-color: white;
+}
+.copy{
+  display: block !important;
+  text-align: center;
+}
+#search, #content, .nav, #footer, #page8,.footernav, #resources, #documentation, #aboveandbeyond{
+  display:none;
+}
+
+#container , .footer,.errormain, #calvin, #errorcopy{
+  display: none;
+}
+
+.copy img{
+  padding:10%;
+}

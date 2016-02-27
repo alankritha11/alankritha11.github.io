@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> MovieLite - Focussed Website </title>
+        <link rel="stylesheet" type="text/css" href="design.css">
+        <link rel="stylesheet" type="text/css" media="print" href="print3.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/jquery.slides.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+        <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+        <link rel="stylesheet" href="js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+        <link rel="stylesheet" href="js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+        <link rel="stylesheet" href="share-button.min.css" type="text/css" media="screen" />
+         <script type="text/javascript" src="js/share-button.min.js"></script>
+
+
+        <script>
+        'use strict';
+
+        $(document).ready(function(){
+
+        $("#index").on("click",function(e){
+          $("#page2,#page3,#page4,#page5,#page6,#page8,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").hide();
+          $("#page1,#page7,#footer").fadeIn();
+          $("#hits,#reviews,#contributions,#blogs").removeClass("selected");
+          $("#index").addClass("selected");
+        });
+        $("#hits").on("click",function(e){
+          $("#page2,#footer,#page7").slideDown();
+          $("#page3,#page1,#page4,#pag5,#page6,#page8,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").slideUp();
+          $("#index,#reviews,#contributions,#blogs").removeClass("selected");
+          $("#hits").addClass("selected");
+        });
+        $("#blogs").on("click",function(e){
+          $("#page3,#footer,#page7").slideDown();
+          $("#page1, #page2,#page4,#page5,#page6,#page8,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").slideUp();
+          $("#index,#reviews,#contributions,#hits").removeClass("selected");
+          $("#blogs").addClass("selected");
+        });
+        $("#contributions").on("click",function(e){
+          $("#page4,#footer,#page7").slideDown();
+          $("#page2,#page1,#page3,#page5,#page6,#page8,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").slideUp();
+          $("#index,#hits,#blogs,#reviews").removeClass("selected");
+          $("#contributions").addClass("selected");
+        });
+        $("#reviews").on("click",function(e){
+          $("#page5,#footer,#page7").slideDown();
+          $("#page1,#page2,#page3,#page4,#page6,#page8,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").slideUp();
+          $("#index,#blogs,#contributions,#hits").removeClass("selected");
+          $("#reviews").addClass("selected");
+        });
+        $("#resourcesMain").on("click",function(e){
+          $("#page8").fadeIn();
+          $("#page1,#page2,#page3,#page4,#page5,#page6,#page7,#footer,#moreImages1,#moreImages2,#moreImages3,#moreImages4,#moreImages5").hide();
+          $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+
+        });
+        $("#gallery1").on("click",function(e){
+          $("#page6").slideDown();
+          $("#moreImages1").slideDown();
+            $("#page1,#page2,#page3,#page4,#page5,#moreImages2,#moreImages3,#moreImages4,#moreImages5").slideUp();
+            $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+        });
+        $("#gallery2").on("click",function(e){
+          $("#page6").slideDown();
+          $("#moreImages2").slideDown();
+            $("#page1,#page2,#page3,#page4,#page5,#moreImages1,#moreImages3,#moreImages4,#moreImages5").slideUp();
+            $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+        });
+        $("#gallery3").on("click",function(e){
+          $("#page6").slideDown();
+          $("#moreImages3").slideDown();
+            $("#page1,#page2,#page3,#page4,#page5,#moreImages2,#moreImages1,#moreImages4,#moreImages5").slideUp();
+            $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+        });
+        $("#gallery4").on("click",function(e){
+          $("#page6").slideDown();
+          $("#moreImages4").slideDown();
+            $("#page1,#page2,#page3,#page4,#page5,#moreImages2,#moreImages3,#moreImages1,#moreImages5").slideUp();
+            $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+        });
+        $("#gallery5").on("click",function(e){
+          $("#page6").slideDown();
+          $("#moreImages5").slideDown();
+            $("#page1,#page2,#page3,#page4,#page5,#moreImages2,#moreImages3,#moreImages4,#moreImages1").slideUp();
+            $("#index,#blogs,#contributions,#hits,#reviews").removeClass("selected");
+        });
+        new ShareButton({
+        networks: {
+        facebook: {
+        app_id: "962418507166105"
+              }
+            }
+          });
+        });
+        $(document).ready( function() {
+            // Don't execute if we're in the Live Editor
+            if( !window.isCMS ) {
+                // Group images by gallery using `data-fancybox-group` attributes
+                var galleryId = 1;
+                $('.editable-gallery').each( function() {
+                    $(this).find('a').attr('data-fancybox-group', 'gallery-' + galleryId++);
+                });
+                // Initialize Fancybox
+                $('.editable-gallery a').fancybox({
+                    // Use the `alt` attribute for captions per http://fancyapps.com/fancybox/#useful
+                    beforeShow: function() {
+                        var alt = this.element.find('img').attr('alt');
+                        this.inner.find('img').attr('alt', alt);
+                        this.title = alt;
+                    }
+                });
+            }
+        });
+        </script>
+      </head>
+      <body>
+      <div class="container">
+        <div  class="searchBar">
+          <input type="search" id="search" placeholder="Search..." />
+    </div>
+       <ul class="nav">
+          <li>
+            <a class="selected" id="index" href = "#">
+            <img class="logoLeft" src="images/logo.png" alt="Image"></a>
+           </li>
+            <li ><a  href = "#" id="hits" >All Time Hits</a></li>
+            <li ><a  href = "#" id="blogs" >Blogs</a></li>
+            <li ><a  href = "#"  id="contributions">Contributions</a></li>
+            <li ><a  href = "#" id="reviews">Reviews</a></li>
+
+
+          </ul>
+
+  <!-- Page 1 -->
+  <section id="content">
+    <div class="wrapper">
+  <section  id="page1">
+      <div class="moviesList">
+                                  <!-- Movie 1  -->
+    <div class="movie">
+        <span class="movieLeft">
+          <img src="images/spectre.png" alt="spectre">
+        </span>
+        <span class="movieRight">
+          <a href="#" id="gallery1">SPECTRE</a>
+
+          <strong>Release Date:</strong> 6th November 2015
+
+        <br /><strong>About the Movie:</strong> A message leads James Bond to Mexico city and Rome
+                where he meets a criminal's widow. After snekaing into a meeting, he knows the existence
+                 of an organization named Spectre.
+        </span>
+        <span class="video"><iframe
+             src="https://www.youtube.com/embed/7GqClqvlObY"  allowfullscreen></iframe></span>
+    </div>
+                                <!-- Movie 2  -->
+    <div class="movie">
+        <span class="movieLeft">
+             <img src="images/hunger.png" alt="HungerGames">
+           </span>
+           <span class="movieRight">
+             <a href="#" id="gallery2" >THE HUNGER GAMES: MOCKINGJAY PART 2</a>
+             <strong>Release Date:</strong> 20th November 2015
+            <br /><strong>About the Movie:</strong> Katniss Everdeen teams up with her closest friends
+               to assasinate President Snow who is obsessed about ending Katniss. This mission determines the future of
+               millions.
+
+         </span>
+         <span class="video"><iframe  src="https://www.youtube.com/embed/n-7K_OjsDCQ"
+             allowfullscreen></iframe>
+          </span>
+    </div>
+                                <!-- Movie 3  -->
+    <div class="movie">
+          <span class="movieLeft">
+            <img src="images/brook.png" alt="Brooklyn">
+          </span>
+          <span class="movieRight">
+             <a href="#" id="gallery3" >BROOKLYN</a>
+            <strong>Release Date:</strong> 6th November 2015
+            <br /><strong>About the Movie:</strong> When an Irish imigrant navigates her way through 1950's Brooklyn(New York)
+            , she faces difficulties and had to make difficult choices.
+        </span>
+        <span class="video"><iframe  src="https://www.youtube.com/embed/15syDwC000k"
+           allowfullscreen></iframe>
+           </span>
+    </div>
+                                  <!-- Movie 4 -->
+    <div class="movie">
+         <span class="movieLeft">
+           <img src="images/sea.png" alt="ByTheSea">
+         </span>
+         <span class="movieRight">
+            <a href="#" id="gallery4" >BY THE SEA</a>
+           <strong>Release Date:</strong> 13th November 2015
+          <br /><strong>About the Movie:</strong> An American couple who are troubled makes the villagers and newly weds their
+           friends and start living their life.
+           </span>
+           <span class="video"><iframe src="https://www.youtube.com/embed/vUFZOO9zO0Q"
+              allowfullscreen></iframe>
+            </span>
+    </div>
+                                  <!-- Movie 5 -->
+    <div class="movie">
+        <span class="movieLeft">
+          <img src="images/peanuts.png" alt="ThePeanutsMovie">
+        </span>
+        <span class="movieRight">
+          <a href="#" id="gallery5" > THE PEANUTS MOVIE</a>
+          <strong>Release Date:</strong> 6th November 2015
+          <br /><strong>About the Movie:</strong> Life was always complicated for Charlie, the boy who gives
+          his best in any condition. When a girl moves into his neighborhood, he develops crush on her. Charlie's friend
+        helps him to make the girl fall in love with him.
+      </span>
+      <span class="video"><iframe  src="https://www.youtube.com/embed/El7chqzwKlo"
+       allowfullscreen></iframe>
+       </span>
+    </div>
+    </div>
+  </section> <!-- page1 section -->
+
+                                    <!--Page 2 -->
+
+  <section  id="page2">
+       <div class="great">
+       <img class="logoGreat" src="images/logoGreat.png" alt="logoGreat">
+      </div>
+    <div class=movies>
+      <img  src="images/2015logo.png" alt="Logo">
+      <ul class="year">
+        <li><a href ="https://www.youtube.com/watch?v=7GqClqvlObY">Spectre</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=seMwpP0yeu4">Inside Out</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=n-7K_OjsDCQ">Furious</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=SDofO3P2HpE">Maze Runner</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=vUFZOO9zO0Q">By The Sea</a></li>
+      </ul>
+
+    </div>
+    <div class=movies>
+      <img  src="images/2014logo.png" alt="Logo">
+      <ul class="year">
+        <li><a href ="https://www.youtube.com/watch?v=Ym3LB0lOJ0o">Gone Girl</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=pK2zYHWDZKo">Lego</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=3PkkHsuMrho">Bird Man</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=2LqzF5WauAw">Interstellar</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=x6t7vVTxaic">Selma</a></li>
+      </ul>
+    </div>
+    <div class=movies>
+      <img  src="images/2013logo.png" alt="Logo">
+      <ul class="year">
+        <li><a href ="https://www.youtube.com/watch?v=TbQm5doF_Uc">Frozen</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=oYSD2VQagc4">IronMan-3</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=OiTiKOy59o4">Gravity</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=z02Ie8wKKRg">Oblivion</a></li>
+        <li> || </li>
+        <li><a href ="https://www.youtube.com/watch?v=Rh1LdTFkm7I">The Wolverine</a></li>
+      </ul>
+    </div>
+  </section> <!-- page2 section -->
+
+  <!--Page 3 -->
+  <section  id="page3">
+
+
+  <div class="blogContent">
+  <h2>The Godfather</h2>
+  <span class="blogAuthor"> By <strong> Hardik Tripathi </strong></span>
+  <p>If I think about all-time greatest movies, the first name which strikes my mind is The Godfather.
+  The Mario Puzo film which is directed by Francis Ford Coppola has all the perfect aspect which any
+  movie maker could ever imagine. The father-son relationship is the main essence of the movie which is
+  beautifully depicted by Marlon Brando and Al Pacino. It’s not just some mafia / crime family related concept
+  but tries to explain how different scenarios in one’s life can change the entire future of the family. The
+  thrill and the unpredictable twists make the movie really interesting till the end. The final thing which I
+  would like to say about this movie is that, if anyone would start watching the first part of the movie, you
+  will not feel the completeness till you finish watching all the three parts of this series. Overall, the movie
+  and the series pack a perfect punch for all the viewers which would set a benchmark for rest of the movies across
+  the world. In one word my review would be ‘Legendary’.</p>
+  </div>
+  <div class="blogContent">
+  <h2>American History X</h2>
+  <span class="blogAuthor"> By <strong> Dawit</strong></span>
+  <p>American History X is a 1998 drama about violence, racism, and neo-Nazism. It’s a moving
+  picture about neo-Nazi skinhead Derek Vinyard, played by Edward Norton (of Fight Club fame) who
+  brutally murders two black teens after trying to steal his car. Once released from prison, Derek
+  emerges a changed man who struggles to help his younger brother from falling into the same trap he did.
+  The film does a fantastic job highlighting Derek’s struggles with a lifetime full of prejudice and hate.
+  Although his former acts were inexplicable, you almost sympathize with the internal struggles Vinyard goes
+  through as he fights to become a better person. Each time I complete the movie I sit back and reflect on who
+  I am today and what life would be like if I grew up in a similar setting. I think about how far our nation
+  has come from our former, darker years. And, I think about how much more progress we have to work towards.
+  American History X is a fantastic movie and I highly recommend all that haven’t seen it to give it a chance!
+  </p>
+  </div>
+  <div class="blogContent">
+  <h2>Mad Max Fury Road 2015</h2>
+  <span class="blogAuthor"> By <strong> Pooja Sharma</strong></span>
+  <p>BANG BOOM BLASTS! This movie was probably one of the most action packed movies I have seen
+  in some time. Before I get into the movie details an interesting fact about the way this was filmed.
+  The movie is filmed in such a way that every single scene focuses on the center of the screen so the
+  entire time all important action was always in your radius of attention in the center, which also is
+  where you see the most clearly. The movie was of a post-apocalyptic world where there was an evil ruler
+  who was manipulating people to exploit them and eventually a group of people overcome many obstacles to
+  overthrow him. It was an entertaining movie that I enjoyed for a good time pass action packed movie. Yet
+  it was typical, and predictable movie that did not stir and excitement for me.
+  </p>
+  </div>
+  <div class="blogContent">
+  <h2>The Harry Potter</h2>
+  <span class="blogAuthor"> By <strong> Vinneth</strong></span>
+  <p>The Harry Potter movie series is an enticing set of movies for all ages alike.
+  Mostly adapted from the books written by J.K. Rowling, the movies depict the rise of a young
+  wizard in a world filled with powerful sorcerers, imaginary creatures and puissant magic.
+  While the movies match the books to the last word, changes have been made to suit the wide range
+  of viewership these movies draw. Due to the PG-13 ratings of the movies, certain content has
+  been removed to adapt the movie for the younger audience. Each movie focuses on the educational
+  experience of Harry Potter, a young orphaned wizard who spends nearly 7 to 8 years at the Hogwarts
+  School of Witchcraft and Wizardry learning new tricks, making new friends and enemies alike,
+  and mostly trying to fight back Voldemort, the most powerful antagonist of the series. The movies
+  have drawn a huge fan following to the books, where the audience are visualize the stupendous events
+  occurring as the young wizard grows into a powerful sorcerer.
+  </p>
+  </div>
+  </section>
+
+  <!--Page 4 -->
+  <section  id="page4">
+
+  <!-- Blogger form -->
+  <form  method="post" class="blog">
+  <h2> Here I Blog !</h2>
+  <label>
+  <span>Your Name:</span> <input  type="text" name="name" placeholder="Your Name"/>
+  </label>
+  <label>
+  <span>Movie Name:</span> <input  type="text" name="name" placeholder="Movie Name"/>
+  </label>
+  <label>
+  <span>Blog:</span> <textarea  name="message" placeholder="Please Blog !"></textarea>
+  </label>
+  <label>
+  <span>&nbsp;</span>
+  <input type="submit" class="button" value="Blog"/>
+  </label>
+  </form>
+  <br />
+  <!-- Review -->
+  <form  method="post" class="blog">
+  <h2> Critiques !</h2>
+  <label>
+  <span>Your Name:</span> <input  type="text" name="name" placeholder="Your Name"/>
+  </label>
+  <label>
+  <span>Movie Name:</span> <input  type="text" name="name" placeholder="Movie Name"/>
+  </label>
+  <label>
+  <span>Review:</span> <textarea  name="message" placeholder="Please Review !"></textarea>
+  </label>
+  <label>
+  <span class="starRating"><strong>Rating:</strong>
+  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+  </span>
+  </label>
+  <label>
+  <span>&nbsp;</span>
+  <input type="submit" class="button" value="Submit your Review"/>
+  </label>
+
+  </form>
+  </section>
+  <!-- page 5 -->
+  <section  id="page5">
+
+  <!--First REview -->
+  <article class="review">
+  <figure>
+  <img src="images/leon.png" alt="leon">
+  </figure>
+  <div class="figucaption">
+  <h2>LEON</h2>
+  <span class="author"> By <strong> Dawit Elias </strong></span>
+  <p>The Professional is an English language French crime thriller film directed by Luc Besson.
+  The film debuted in 1994 starring Natalie Portman and Jean Reno. Fun fact: This was Portman’s
+  first film. The movie is about a 12-year-old girl named Mathilda. Mathilda was taken in by her
+  neighbor, a professional assassin named Leon, after her family was murdered. The film profiles
+  the unusual relationship formed between Leon and Mathilda as she learns to become an assassin.</p>
+  <div class="rating">
+  <p><strong>Rating:</strong></p>
+  <span class="reviewRating">
+  <input  type="radio" name="rating" value="5">
+  <label >5</label>
+  <input  type="radio" name="rating" value="4">
+  <label>4</label>
+  <input   name="rating" value="3">
+  <label >3</label>
+  <input  type="radio" name="rating" value="2">
+  <label >2</label>
+  <input  type="radio" name="rating" value="1">
+  <label >1</label>
+  </span>
+  </div>
+  </div>
+  </article>
+  <!-- Second Review -->
+  <article class="review">
+  <figure>
+  <img src="images/shawshank.png" alt="shawshank">
+  </figure>
+  <div class="figucaption">
+  <h2>THE SHAWSHANK REDEMPTION</h2>
+  <span class="author"> By <strong> Pooja Sharma </strong></span>
+  <p>  The Shawshank Redemption is a drama about a man sentenced to two life terms in a rough
+  prison for killing his wife and her lover. The protagonist, Andy, is innocent but cannot prove himself so.
+  Following this, the film chronicles his life and the struggles of prison while forming the friendship of
+  a lifetime with Red (Morgan Freeman). This movie is cerebral, highly decorated, and highly worth your time.
+  </p>
+  <div class="rating">
+  <p><strong>Rating:</strong></p>
+  <span class="reviewRating">
+  <input  type="radio" name="rating" value="5">
+  <label>5</label>
+  <input  type="radio" name="rating" value="4">
+  <label >4</label>
+  <input  type="radio" name="rating" value="3">
+  <label >3</label>
+  <input  type="radio" name="rating" value="2">
+  <label >2</label>
+  <input type="radio" name="rating" value="1">
+  <label >1</label>
+  </span>
+  </div>
+  </div>
+  </article>
+  <!-- Third Review -->
+  <article class="review">
+  <figure>
+  <img src="images/rockey.png" alt="Rockey">
+  </figure>
+  <div class="figucaption">
+  <h2>Rocky</h2>
+  <span class="author"> By <strong> Anusha </strong></span>
+  <p>  Sylvester Stallone has played an inspirational role in this movie.
+  This movie makes you feel charged up whenever you watch it. I prefer this
+  movie as a motivation as it shows whatever low you hit in your life, one
+  should never stop fighting. Rise up and fight against all odds is what this movie
+  has depicted in a simple but unique fashion.
+  </p>
+  <div class="rating">
+  <p><strong>Rating:</strong></p>
+  <span class="reviewRating">
+  <input  type="radio" name="rating" value="5">
+  <label >5</label>
+  <input  type="radio" name="rating" value="4">
+  <label >4</label>
+  <input type="radio" name="rating" value="3">
+  <label >3</label>
+  <input type="radio" name="rating" value="2">
+  <label >2</label>
+  <input  type="radio" name="rating" value="1">
+  <label >1</label>
+  </span>
+  </div>
+  </div>
+  </article>
+
+  <!-- forth Review -->
+  <article class="review">
+  <figure>
+  <img src="images/django.png" alt="Django">
+  </figure>
+  <div class="figucaption">
+  <h2>Django Unchained</h2>
+  <span class="author"> By <strong> Gloria </strong></span>
+  <p>  The team of Quentin Tarantino, Christoph Waltz, Jamie Foxx and Leonardo
+  DiCaprio has created a magic what one would ask for. The legend has been told in unorthodox
+  fashion which swings between several concepts of love, drama, condition of the African-American
+  people during the slavery period in the USA and the relation between a Master and his disciple.
+  For those who haven’t watched this movie, please do watch it. You won’t regret it.
+
+  </p>
+  <div class="rating">
+  <p><strong>Rating:</strong></p>
+  <span class="reviewRating">
+  <input  type="radio" name="rating" value="5">
+  <label >5</label>
+  <input  type="radio" name="rating" value="4">
+  <label>4</label>
+  <input  type="radio" name="rating" value="3">
+  <label>3</label>
+  <input  type="radio" name="rating" value="2">
+  <label >2</label>
+  <input  type="radio" name="rating" value="1">
+  <label>1</label>
+  </span>
+  </div>
+  </div>
+  </article>
+
+</section>
+<!--Page 5 End Page -->
+
+<!--Page 6 More Images page -->
+
+  <section id="page6">
+  <div class="slideshow">
+  <div class="slideimage">
+  <img  src="images/slide.png" alt="Slide Show">
+  </div>
+  </div>
+  <div  id="my-gallery" >
+  <div class="editable-gallery">
+  <div id="moreImages1">
+
+  <a class="fancybox" data-fancybox-group="gallery-1"  href="images/moreimages/spectre1.png"><img src="images/moreimages/spectre1.png" alt="Making of Spectre" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-1"  href="images/moreimages/spectre2.png"><img src="images/moreimages/spectre2.png" alt="Making of Spectre" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-1"  href="images/moreimages/spectre3.png"><img src="images/moreimages/spectre3.png" alt="Making of Spectre" /></a>
+</div>
+  </div>
+    <div class="editable-gallery">
+  <div id="moreImages2">
+  <a class="fancybox" data-fancybox-group="gallery-2"  href="images/moreimages/mock1.png"><img src="images/moreimages/mock1.png" alt="Mockingjay" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-2"  href="images/moreimages/mock5.png"><img src="images/moreimages/mock5.png" alt="Mockingjay" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-2"  href="images/moreimages/mock3.png"><img src="images/moreimages/mock3.png" alt="Mockingjay" /></a>
+</div>
+  </div>
+    <div class="editable-gallery">
+  <div id="moreImages3">
+  <a class="fancybox" data-fancybox-group="gallery-3"  href="images/moreimages/brook1.png"><img src="images/moreimages/brook1.png" alt="Brooklyn" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-3"  href="images/moreimages/brook2.png"><img src="images/moreimages/brook2.png" alt="Brooklyn" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-3"  href="images/moreimages/brook3.png"><img src="images/moreimages/brook3.png" alt="Brooklyn" /></a>
+</div>
+  </div>
+  <div class="editable-gallery">
+  <div id="moreImages4">
+  <a class="fancybox" data-fancybox-group="gallery-4"  href="images/moreimages/by1.png"><img src="images/moreimages/by1.png" alt="By The Sea" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-4"  href="images/moreimages/by2.png"><img src="images/moreimages/by2.png" alt="By The Sea" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-4"  href="images/moreimages/by3.png"><img src="images/moreimages/by3.png" alt="By The Sea" /></a>
+</div>
+  </div>
+  <div class="editable-gallery">
+  <div id="moreImages5">
+  <a class="fancybox" data-fancybox-group="gallery-5"  href="images/moreimages/pea1.png"><img src="images/moreimages/pea1.png" alt="The Peanuts Movie" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-5"  href="images/moreimages/pea2.png"><img src="images/moreimages/pea2.png" alt="The Peanuts Movie" /></a>
+  <a class="fancybox" data-fancybox-group="gallery-5"  href="images/moreimages/pea3.png"><img src="images/moreimages/pea3.png" alt="The Peanuts Movie" /></a>
+</div>
+  </div>
+</div>
+<ul class="book" ><li><a href="http://www.fandango.com/"><img src= "images/book.png" alt="Book tickets"></a></li></ul>
+
+  </section>
+</div> <!-- wrapper div -->
+
+  <!--Page 7 -->
+  <section  id="page7">
+  <form action="contact.php"  id="form">
+
+  <p> <textarea name="message" placeholder="Your message"></textarea></p>
+  <p> <input type="submit" id="submit" value="Talk To Us !" ></p>
+
+  </form>
+
+  <share-button class="share"></share-button>
+
+
+  </section>
+  </section> <!-- content section -->
+
+
+
+
+
+
+      <footer id="footer">
+        <p><!--#include file="footer.html"--></p>
+        <ul class="footerNav">
+          <li><a href ="http://twitter.com"><img src="images/twitter.png" alt="twitter"></a></li>
+          <li><a href ="http://youtube.com"><img src="images/youtube.png" alt="Youtube"></a></li>
+          <li><a href ="https://www.facebook.com/profile.php?id=100007658537679"><img src="images/facebook.png" alt="facebook"></a></li>
+       </ul>
+       <ul class="rnav"><li><a  href = "#" id="resourcesMain">Resources</a></li></ul>
+
+
+    </footer>
+    <section  id="page8">
+
+      <div id="resources">
+            <h2>RESOURCES</h2>
+            <h4><a href="index.html">References for Index:</a></h4>
+            <ul>
+              <li>Movieclips Trailers. (n.d.). Retrieved from https://www.youtube.com/user/
+                movieclipsTRAILERS</li>
+              <li>All the Image: Google Images. (n.d.). Retrieved from https://www.google.com/imghp</li>
+              <li>Movie Reviews – MRQE – the Movie Review Query Engine. (n.d.). Retrieved from http://www.mrqe.com/</li>
+              <li>Dreamweaver Tutorial | FancyBox JQuery Plugin Gallery- A lightbox alternative [Video file]. (n.d.). Retrieved from https://www.youtube.com/watch?v=hZwxgj9dIL8</li>
+              <li>Share button in the bottom of the page: carrot/share-button · GitHub. (n.d.). Retrieved from https://github.com/carrot/share-button</li>
+              <li>Send Email with PHP [Video file]. (n.d.). Retrieved from https://www.youtube.com/watch?v=lh1UNGA518s</li>
+              <li>Using CSS animations - CSS | MDN. (n.d.). Retrieved from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations</li>
+            </ul>
+            <h4><a href="index.html">References for All Time Hits</a></h4>
+            <ul>
+            <li>How to Put an Image Inside of Text in Photoshop. (n.d.). Retrieved from https://www.youtube.com/watch?v=4ildDqCrT4c</li>
+            <li>Adobe Photoshop CS6 - Text Transparency Effect. (n.d.). Retrieved from https://www.youtube.com/watch?v=UX_aOjw2deo</li>
+            <li>DaFont - Download fonts. (n.d.). Retrieved from http://www.dafont.com/</li>
+            <li>Search Box CSS: How to Create a Great Looking Search Box. (n.d.). Retrieved from https://blog.udemy.com/search-box-css/</li>
+            <li>footer icons:black faceboook, twitter,contact us icons - Google Search. (n.d.). Retrieved from https://www.google.com/
+            </li>
+          </ul>
+            <h4><a href="index.html">References for Reviews</a></h4>
+            <ul>
+            <li>Star Ratings With Very Little CSS | CSS-Tricks. (n.d.). Retrieved from https://css-tricks.com/star-ratings/</li>
+            <li>All the Image: Google Images. (n.d.). Retrieved from https://www.google.com/imghp</li>
+          </ul>
+            <h4><a href="index.html">References for Contribution</a></h4>
+            <ul><li>Style Web Forms Using CSS. (n.d.). Retrieved from http://www.sitepoint.com/style-web-forms-css/</li>
+            <li>Star Ratings With Very Little CSS | CSS-Tricks. (n.d.). Retrieved from https://css-tricks.com/star-ratings/</li>
+          </ul>
+      </div>
+      <div id="documentation">
+          <h2>MOVIELITE'S DOCUMENTATION</h2>
+          <h3>PROJECT REQUIREMENTS AND EXPECTATIONS</h3>
+          <p>As I discussed, this is a movie content website where you can view as well as write movie reviews and watch trailers. It is different from other websites because it doesn't need subscription.
+            The website's name is MOVIELITE. People can blog about movies, watch trailers, review movies and know about the best movies.</p>
+          <div class="document">
+              <h4><strong>Content</strong></h4>
+              <ul><li> All the content in the webpage is original. Infact the reviews were written by people
+              who actually watched those movies and liked them.</li></ul>
+              <h4><strong>DHTML, HTML/CSS</strong></h4>
+            <ul><li> The CSS and HTML code is validated.</li>
+              <li>Code is clean and it is responsive.</li>
+              <li>Images are appropriately sized</li>
+            <li>Implemented a Single page application where fadein, slideup, slidedown and hide are used.</li>
+            <li><strong>NOTE:</strong>If you click the logo, you can reach the index page from any page. </li></ul>
+              <h4><strong>jQuery/JS</strong></h4>
+              <ul><li>Fancybox is used for Gallery.[Click the name of the movie in the index page, you can view the gallery related to the movie]</li>
+              <li>Though the images are downloaded from google, they are resized using photoshop.</li></ul>
+              <h4><strong>Form Mail</strong></h4>
+              <ul><li> Instead of using a form mail, used php to implement this feature.A page is echoed prompting that "Your Message is sent"</li></ul>
+              <h4><strong>SSI</strong></h4>
+              <ul><li>SSI is used to include the footer which includes "copyrights"</li>
+              <li>SSI "last modified" can be seen in the index page where it displays the last modified date of the movie list.</li>
+            </ul>
+              <h4><strong>HT Access</strong></h4>
+              <ul><li>Custom 404 page is created: <a href="errorPage.html">"Click Me !"</a></li>
+              <li>Authentication is provided for the whole project. You need to be a RIT user to view the project.</li>
+            <li>Password protected directory is created : <a href="protected/protected.html">"Click Me !"</a></li></ul>
+              <h4><strong>Documentation</strong></h4>
+              <ul><li>All the resources are cited above and "Above and Beyond" is stated below.</li>
+              <li>The resources page is not obstrusive. It is at the bottom of the page.</li></ul>
+              <h4><strong>Improvements</strong></h4>
+              <ul><li>The website would have been better if the "search bar" would actually work.</li>
+              <li>The contributions page which has blog and review forms would be perfect if we can actually write content
+              and display them in their respective pages.</li>
+              <li>The star rating could have been better with the colors appropriate to website and responsive. It can give us even more information like
+              good, better, worst etc.</li></ul>
+      </div>
+      </div>
+      <div id="aboveandbeyond">
+        <h2>ABOVE AND BEYOND</h2>
+        <ul>
+          <li>Designed an image using photoshop by clubbing all images for CSS animation.</li>
+          <li>Implemented CSS animations when you click the Movie name in the first page(References For Index).</li>
+          <li> Sending me an email using php code(References For Index).</li>
+          <li> Below the "Message Us" there is a share-button where we can share about MovieLite on facebook,linkedin,google+ etc.(References For Index).</li>
+          <li>Print for error and main page. Used little innovation for print page.</li>
+          <li>"Book Now" button parses you to "http://www.fandango.com/" page where we can actually book tickets.</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+      <section class="copy">
+      <img src="images/copyright.jpg" alt="Copyright">
+      <p>&copy;Copyright 2015 Alankritha Yata-All rights reserved</p>
+    </section>
+    </div>
+    </body>
+    </html>
